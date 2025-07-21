@@ -15,7 +15,25 @@ class Goto < Formula
     end
   end
 
+  on_linux do
+    on_arm do
+      url "https://github.com/kujirahand/goto/releases/download/v1.1.1/goto-v1.1.1-linux-arm64.zip"
+      sha256 "23d63867413b4f69e889f17c2dba61160bd8164eaa41bb3fdf4e908016ca050f"
+    end
+
+    on_intel do
+      url "https://github.com/kujirahand/goto/releases/download/v1.1.1/goto-v1.1.1-linux-amd64.zip"
+      sha256 "5fc23f276c08418a69ac5466a057502eedc87278e289175cf05cff40a31e9ed7"
+    end
+  end
+
   def install
-    bin.install "goto"
+    binary =
+      if OS.mac?
+        Hardware::CPU.arm? ? "goto-darwin-arm64" : "goto-darwin-amd64"
+      else
+        Hardware::CPU.arm? ? "goto-linux-arm64" : "goto-linux-amd64"
+      end
+    bin.install binary => "goto"
   end
 end
