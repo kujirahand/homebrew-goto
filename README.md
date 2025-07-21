@@ -5,5 +5,5 @@ goto for Homebrew
 ## Installation
 
 ```bash
-brew install kujirahand/goto
+brew install kujirahand/goto/goto
 ```
