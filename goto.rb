@@ -1,4 +1,4 @@
-class Goto < Formula
+class goto < Formula
   desc "Fast directory navigation CLI"
   homepage "https://github.com/kujirahand/goto"
   license "MIT"
