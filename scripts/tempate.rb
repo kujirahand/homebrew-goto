@@ -2,7 +2,7 @@ class Goto < Formula
   desc "Fast directory navigation CLI"
   homepage "https://github.com/kujirahand/goto"
   license "MIT"
-  version "1.1.1"
+  version "<VERSION>"
 
   on_macos do
     on_arm do
